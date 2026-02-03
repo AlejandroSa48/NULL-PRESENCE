@@ -2,13 +2,19 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
+
 public class UIManager1 : MonoBehaviour
 {
+
+
     [Header("UI Panels")]
     public GameObject initialUI;
     public GameObject gameUI;
     public GameObject pauseUI;
     public GameObject gameOverUI;
+
+    [SerializeField] ScoreSystem ScoreManager;
 
     [Header("Game UI Elements")]
     public TextMeshProUGUI scoreText;
@@ -38,6 +44,7 @@ public class UIManager1 : MonoBehaviour
 
     public void UpdateScore(int score)
     {
+        score=ScoreManager.GetScore();
         scoreText.text = $"Score: {score}";
     }
 

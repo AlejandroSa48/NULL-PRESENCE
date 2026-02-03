@@ -9,6 +9,6 @@ public class Collectable : MonoBehaviour
     {
         scoreSystem.AddScore(scoreValue);
         Debug.Log($"Collected! Score increased by {scoreValue}.");
-        Destroy(gameObject);
     }
+
 }
